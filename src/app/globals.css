@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Intercom Font Imports */
+@font-face {
+  font-family: 'Medium';
+  src: url('/fonts/MediumLLSub-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: url('/fonts/MediumLLSub-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: url('/fonts/MediumLLSub-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ivory';
+  src: url('/fonts/IvoryLLSub-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --border: 220 13% 91%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    /* Intercom Colors */
+    --intercom-dark: 25 6% 7%;
+    --intercom-light: 60 14% 95%;
+    --intercom-accent: 240 51% 60%;
+
+    /* UI Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 25 6% 7%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 51% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 25 6% 7%;
+    --foreground: 0 0% 98%;
+    --card: 25 6% 7%;
+    --card-foreground: 0 0% 98%;
+    --popover: 25 6% 7%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 51% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Medium', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Ivory', serif;
+    font-weight: 300;
+  }
+}
+
+@layer utilities {
+  .intercom-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .intercom-gradient-bg {
+    background: radial-gradient(70% 50% at 50% 50%, rgba(99, 101, 207, 0.12) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .intercom-button {
+    @apply rounded-full px-4 py-2 font-medium transition-all;
+  }
+
+  .intercom-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .intercom-button-outline {
+    @apply border border-border bg-transparent hover:bg-secondary;
+  }
+}
