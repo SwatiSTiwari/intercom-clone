@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientBody from "./ClientBody";
-import { Header } from "@/components/layout/header";
+import Header from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
